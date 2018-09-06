@@ -1,0 +1,1 @@
+define(["jquery","hand"],function(a,c){return function(n,e,t,i){var r=a(n).html(),u=c.compile(r)(e);i?a(t).append(u):a(t).html(u)}});

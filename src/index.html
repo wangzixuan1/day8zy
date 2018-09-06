@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper-4.3.3.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <span>北京</span>
+            <input type="text" placeholder="输入商品">
+            <span>我的</span>
+        </header>
+        <main class="main">
+            <div up='下拉刷新' down='上拉加载更多' class="cont">
+                <div class="banner swiper-container">
+                    <div class="swiper-wrapper">
+
+                    </div>
+                </div>
+                <script id="swiper" type="text/x-handlebars-template">
+                    {{#each this}}
+                    <div class="swiper-slide">
+                        {{#each lis}}
+                        <dl>
+                            <dt><img src="{{url}}" alt=""></dt>
+                            <dd>{{tit}}</dd>
+                        </dl>
+                        {{/each}}
+                    </div>
+                    {{/each}}
+                </script>
+                <!-- <h3>猜你喜欢</h3> -->
+                <div class="con">
+
+                </div>
+                <script id="list" type="text/x-handlebars-template">
+                    {{#each this}}
+                    <dl>
+                        <dt><img src="{{url}}" alt=""></dt>
+                        <dd>
+                            <h2>{{tit}}</h2>
+                            <h4>{{h4}}</h4>
+                            <p><span><z class="z">{{price}}</z></span><span>{{sum}}</span></p>
+                        </dd>
+                    </dl>
+                    {{/each}}
+                </script>
+            </div>
+
+        </main>
+    </div>
+    <script src="./js/libs/require.js" data-main="./js/main.js"></script>
+</body>
+
+</html>
